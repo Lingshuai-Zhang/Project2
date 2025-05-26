@@ -1,0 +1,891 @@
+/* ===================================================================
+   Global Styles
+   =================================================================== */
+/* Reset default styles for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}/*Unified rendering effect to avoid unexpected layout issues.*/
+
+/* Main page body styles */
+body {
+  max-width: 900px;          /* Set maximum width */
+  margin: 0 auto;            /* Center horizontally */
+  padding: 20px;             /* Padding */
+  font: 16px/1.5 "Arial", sans-serif;     /* Equivalent to font-size:16px; line-height:1.5; font-family:"Roboto", sans-serif; */
+  background-image: url('images/background.jpg');  /* Background image */
+  background-size: cover;     /* Cover entire area with background */
+  background-repeat: no-repeat;  /* No background repeat */
+  background-attachment: fixed;  /* Fixed background */
+  color: #333;               /* Text color */
+  line-height: 1.8;          /* Line height */
+}/*Purpose: Limit page width, center content, add background image and beautify fonts.
+ Why: Maintain consistent typography, aesthetics and good user experience.*/
+
+/* ===================================================================
+ Header & Navigation
+ =================================================================== */
+/* Header styles */
+header {
+  background: #222;          /* Dark background */
+  color: #131111;               /* White text */
+  padding: 20px 0;           /* Vertical padding */
+  text-align: center;        /* Center text */
+  border-radius: 8px;        /* Rounded corners */
+  margin-bottom: 20px;       /* Bottom margin */
+}
+
+/* Logo container styles */
+.logo {
+  display: flex;             /* Flex layout */
+  align-items: center;       /* Vertical center */
+  justify-content: center;   /* Horizontal center */
+  gap: 1rem;                /* Element spacing */
+  margin-bottom: 1rem;      /* Bottom margin */
+}
+
+/* Logo image styles */
+.logo img {
+  width: 50px;              /* Fixed width */
+  height: auto;             /* Auto height */
+}
+
+/* Logo title styles */
+.logo h1 {
+  font-size: 2.5rem;        /* Font size */
+  font-weight: 700;         /* Font weight */
+  color: #fff;              /* White text */
+}
+
+/* Navigation menu styles */
+nav ul {
+  display: flex;            /* Flex layout */
+  list-style: none;         /* Remove list style */
+  padding: 1rem 0;         /* Vertical padding */
+  justify-content: center;  /* Center horizontally */
+}
+
+/* Navigation link styles */
+nav a {
+  color: rgb(0, 0, 0);            /* White text */
+  text-decoration: none;   /* Remove underline */
+  font-weight: 500;        /* Font weight */
+  transition: color 0.3s;  /* Color transition effect */
+  padding: 0.5rem 1rem;    /* Padding */
+  border-radius: 4px;      /* Rounded corners */
+}
+
+/* Navigation link hover effect */
+nav a:hover {
+  color: #ff4655;          /* Text color on hover */
+  background-color: rgba(255, 255, 255, 0.1);  /* Semi-transparent background */
+}/*Purpose:
+Set header color and layout;
+.logo uses Flex for logo and text center alignment;
+nav ul uses flex for horizontal navigation bar.
+Why: Aligned structure, improves navigation clarity and visual hierarchy.*/
+
+/* ===================================================================
+ Main Content & Sections
+ =================================================================== */
+/* Main content area styles: Purpose: Set card style for content area, semi-transparent white background, rounded corners, shadow.
+ Why: Enhances visual hierarchy, focuses content, background image won't interfere with reading.*/
+main {
+  margin: 20px 0;          /* Vertical margin */
+  padding: 20px;           /* Padding */
+  background: rgba(255, 255, 255, 0.9);  /* Semi-transparent white background */
+  border-radius: 8px;      /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Shadow effect */
+}
+
+/* Content block styles */
+section {
+  margin-bottom: 30px;     /* Bottom margin */
+  padding: 20px;           /* Padding */
+  background: rgba(255, 255, 255, 0.95);  /* More opaque white background */
+  border-radius: 8px;      /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Shadow effect */
+}
+
+/* Title styles: Purpose: Unify title styles, list indentation, readability.
+ Why: Clear hierarchy, beneficial for accessibility (a11y) and structural sense.*/
+h1, h2, h3 {
+  color: #1a1a1a;          /* Dark text */
+  margin-bottom: 1rem;     /* Bottom margin */
+  text-align: center;      /* Center text */
+}
+
+/* First level title styles */
+h1 {
+  font-size: 2.5rem;       /* Font size */
+  font-weight: 700;        /* Font weight */
+}
+
+/* Second level title styles */
+h2 {
+  font-size: 2rem;         /* Font size */
+  font-weight: 600;        /* Font weight */
+  padding-bottom: 0.5rem;  /* Bottom padding */
+  border-bottom: 2px solid #ff4655;  /* Bottom border */
+}
+
+/* Third level title styles */
+h3 {
+  font-size: 1.5rem;       /* Font size */
+  font-weight: 500;        /* Font weight */
+  margin-top: 1.5rem;      /* Top margin */
+}
+
+/* List styles */
+ul, ol {
+  margin-left: 2rem;       /* Left margin */
+  margin-bottom: 1rem;     /* Bottom margin */
+}
+
+/* List item styles */
+li {
+  margin-bottom: 0.5rem;   /* Bottom margin */
+}
+
+/* Definition list styles */
+dl {
+  margin: 1rem 0;
+}
+
+dt {
+  font-weight: bold;
+  color: #ff4655;
+  margin-top: 1rem;
+}
+
+dd {
+  margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Table styles: Purpose: Make tables cleaner and aligned; highlight keywords in definition lists.
+ Why: Clear data presentation, formatted appearance, good visual guidance.*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  background: #fff;
+}
+
+th, td {
+  padding: 0.75rem;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Figure styles */
+figure {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}/*Purpose: Responsive layout, prevent image overflow, visually smoother.
+ Why: Strong responsive compatibility, enhances image aesthetics.*/
+
+figcaption {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #666;
+}
+
+/* ===================================================================
+ Footer
+ =================================================================== */
+/* Footer styles: Purpose: Set dark background with white text, creating clear "end of page" feeling.
+ Why: Clear information closure, complete structure.*/
+footer {
+  background: #222;        /* Dark background */
+  color: white;            /* White text */
+  text-align: center;      /* Center text */
+  padding: 1rem;           /* Padding */
+  margin-top: 2rem;        /* Top margin */
+  border-radius: 8px;      /* Rounded corners */
+}
+
+/* Footer link styles */
+footer a {
+  color: #ff4655;          /* Link color */
+  text-decoration: none;   /* Remove underline */
+}
+
+/* Footer link hover effect */
+footer a:hover {
+  text-decoration: underline;  /* Show underline on hover */
+}
+
+/* ===================================================================
+ Responsive Styles
+ =================================================================== */
+/* Mobile device styles (applies when screen width is less than 768px): Purpose: Optimize layout for phones or small screens.
+ Why: Ensure website usability on mobile devices, a basic capability of modern websites.*/
+@media (max-width: 768px) {
+  body {
+      padding: 10px;       /* Reduce padding */
+  }
+  
+  /* Change navigation menu to vertical layout */
+  nav ul {
+      flex-direction: column;  /* Vertical arrangement */
+      gap: 1rem;             /* Reduce spacing */
+  }
+  
+  /* Adjust navigation link styles */
+  nav a {
+      display: block;        /* Block display */
+      padding: 0.5rem;       /* Padding */
+  }
+  
+  /* Change logo container to vertical layout */
+  .logo {
+      flex-direction: column;  /* Vertical arrangement */
+  }
+  
+  /* Adjust title sizes */
+  .logo h1 {
+      font-size: 2rem;      /* Reduce font size */
+  }
+  
+  /* Adjust main content area */
+  main {
+      padding: 15px;        /* Reduce padding */
+  }
+  
+  /* Adjust content blocks */
+  section {
+      padding: 15px;        /* Reduce padding */
+  }
+  
+  /* Adjust title sizes */
+  h1 {
+      font-size: 2rem;
+  }
+  
+  h2 {
+      font-size: 1.75rem;
+  }
+  
+  h3 {
+      font-size: 1.25rem;
+  }
+}
+
+/* ===================================================================
+ Form Styles
+ =================================================================== */
+/* Form container styles */
+.application-form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form title styles */
+.application-form h2 {
+  text-align: center;
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  border-bottom: 2px solid #ff4655;
+  padding-bottom: 0.5rem;
+}
+
+/* Form section styles */
+.form-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.form-section h3 {
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+/* Form group styles */
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Label styles */
+.form-group label {
+  font-weight: 500;
+  color: #333;
+  font-size: 1rem;
+}
+
+/* Input field styles */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #ff4655;
+  box-shadow: 0 0 0 2px rgba(255, 70, 85, 0.2);
+  outline: none;
+}
+
+/* Radio button and checkbox group styles */
+.radio-group,
+.checkbox-group {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.radio-group label,
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+/* Submit button styles */
+.submit-group {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.submit-group button {
+  background-color: #B80028;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-group button:hover {
+  background-color: #e63c4a;
+  transform: translateY(-2px);
+}
+
+.submit-group button:active {
+  transform: translateY(0);
+}
+
+/* Form row layout (for side-by-side elements) */
+.form-row {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+/* Error message styles */
+.form-group input:invalid,
+.form-group select:invalid {
+  border-color: #ff4655;
+}
+
+.form-group input:invalid:focus,
+.form-group select:invalid:focus {
+  box-shadow: 0 0 0 2px rgba(255, 70, 85, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .application-form {
+      padding: 1rem;
+  }
+
+  .form-row {
+      flex-direction: column;
+      gap: 1rem;
+  }
+
+  .radio-group,
+  .checkbox-group {
+      flex-direction: column;
+      gap: 0.5rem;
+  }
+
+  .form-section {
+      padding: 1rem;
+  }
+}
+
+/* ===================================================================
+ Homepage Styles
+ Purpose:
+Set main visual hero image, highlight welcome message;
+Customize bullet points, beautify lists;
+Latest news, announcements use box style, clean and organized.
+Why: Homepage is first impression, structure must be clear, visuals must be attractive.
+ =================================================================== */
+/* Hero section styles */
+.hero {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+  border-bottom: none;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.hero-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Company overview styles */
+.company-overview {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.company-overview h3 {
+  color: #ff4655;
+  margin-top: 1.5rem;
+  border-bottom: none;
+}
+
+.company-overview ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.company-overview li {
+  padding: 0.5rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.company-overview li:before {
+  content: "•";
+  color: #ff4655;
+  position: absolute;
+  left: 0;
+}
+
+/* Core values styles */
+.core-values {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.core-values ol {
+  counter-reset: item;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.core-values li {
+  padding: 1rem 0;
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.core-values li:before {
+  content: counter(item) ".";
+  counter-increment: item;
+  color: #ff4655;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Latest news styles */
+.latest-news {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.news-item {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  border-left: 4px solid #ff4655;
+}
+
+.news-item h3 {
+  color: #ff4655;
+  margin-bottom: 0.5rem;
+  border-bottom: none;
+}
+
+/* Community engagement styles */
+.community-engagement {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Announcement styles */
+.announcement {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.announcement ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.announcement li {
+  padding: 0.5rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.announcement li:before {
+  content: "→";
+  color: #ff4655;
+  position: absolute;
+  left: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero {
+      padding: 2rem 1rem;
+  }
+
+  .hero h2 {
+      font-size: 2rem;
+  }
+
+  .hero p {
+      font-size: 1rem;
+  }
+
+  .company-overview,
+  .core-values,
+  .latest-news,
+  .community-engagement,
+  .announcement {
+      padding: 1.5rem;
+  }
+}
+
+/* ===================================================================
+ Position Navigation Styles
+ =================================================================== */
+/* Position navigation bar styles: Purpose: Create horizontal navigation bar, add hover effects.
+ Why: Provide clear position category navigation, enhance user experience.*/
+.position-nav {
+  margin: 1.5rem 0 2rem;    /* Vertical margins */
+  padding: 1rem 0;          /* Vertical padding */
+  border-bottom: 1px solid #ddd;  /* Bottom border */
+}
+
+/* Navigation list styles */
+.position-nav ul {
+  display: flex;            /* Flex layout */
+  justify-content: center;  /* Center horizontally */
+  gap: 2rem;               /* Menu item spacing */
+  list-style: none;        /* Remove list style */
+  padding: 0;              /* Remove padding */
+  margin: 0;               /* Remove margin */
+}
+
+/* Navigation link styles */
+.position-nav a {
+  color: #333;             /* Text color */
+  text-decoration: none;   /* Remove underline */
+  font-weight: 500;        /* Font weight */
+  padding: 0.5rem 0;       /* Vertical padding */
+  position: relative;      /* Relative positioning */
+  transition: color 0.3s ease;  /* Color transition effect */
+}
+
+/* Navigation link hover effect */
+.position-nav a:hover {
+  color: #ff4655;          /* Text color on hover */
+}
+
+/* Underline effect */
+.position-nav a::after {
+  content: '';             /* Pseudo-element content */
+  position: absolute;      /* Absolute positioning */
+  width: 0;                /* Initial width 0 */
+  height: 2px;             /* Underline height */
+  bottom: 0;               /* Align to bottom */
+  left: 0;                 /* Align to left */
+  background-color: #ff4655;  /* Pink underline */
+  transition: width 0.3s ease;  /* Width transition effect */
+}
+
+/* Show underline on hover */
+.position-nav a:hover::after {
+  width: 100%;             /* Underline width 100% */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .position-nav ul {
+      flex-direction: column;  /* Vertical arrangement */
+      gap: 1rem;             /* Reduce spacing */
+      align-items: center;    /* Center alignment */
+  }
+  
+  .position-nav a {
+      padding: 0.5rem 1rem;   /* Increase padding */
+  }
+}
+
+/* ===================================================================
+ Job Position Styles
+ =================================================================== */
+/* Job description container styles */
+.job-position {
+  margin-bottom: 3rem;        /* Bottom margin */
+  padding-bottom: 2rem;       /* Bottom padding */
+  border-bottom: 2px solid #ddd;  /* Bottom border */
+}
+
+.job-position h3 {
+  color: #333;                /* Text color */
+  font-size: 1.8rem;          /* Font size */
+  margin-bottom: 1.5rem;      /* Bottom margin */
+  padding: 0.5rem 1rem;       /* Padding */
+  background: linear-gradient(to right, #fff, #f8f8f8);  /* Gradient background */
+  border-radius: 8px;         /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),  /* Main shadow */
+              0 2px 4px rgba(0, 0, 0, 0.05);  /* Secondary shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Transition effect */
+}
+
+.job-position h3:hover {
+  transform: translateY(-2px);  /* Slight upward movement on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15),  /* Enhanced shadow */
+              0 3px 6px rgba(0, 0, 0, 0.1);     /* Enhanced secondary shadow */
+}
+
+/* Last job description doesn't need bottom border */
+.job-position:last-child {
+  border-bottom: none;        /* Remove bottom border */
+  margin-bottom: 0;           /* Remove bottom margin */
+  padding-bottom: 0;          /* Remove bottom padding */
+}
+
+/* Job overview styles */
+.job-overview {
+  margin: 1.5rem 0;           /* Vertical margins */
+  padding: 1rem;              /* Padding */
+  background: rgba(255, 255, 255, 0.8);  /* Semi-transparent white background */
+  border-radius: 8px;         /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);  /* Shadow effect */
+}
+
+/* Job description section styles */
+.job-description {
+  margin: 1.5rem 0;           /* Vertical margins */
+}
+
+/* Key responsibilities section styles */
+.responsibilities {
+  margin: 1.5rem 0;           /* Vertical margins */
+}
+
+/* Job requirements section styles */
+.requirements {
+  margin: 1.5rem 0;           /* Vertical margins */
+}
+
+/* Essential and preferable requirements styles */
+.essential, .preferable {
+  margin: 1rem 0;             /* Vertical margins */
+  padding: 1rem;              /* Padding */
+  background: rgba(255, 255, 255, 0.8);  /* Semi-transparent white background */
+  border-radius: 8px;         /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);  /* Shadow effect */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .job-position {
+      margin-bottom: 2rem;    /* Reduce bottom margin */
+      padding-bottom: 1.5rem; /* Reduce bottom padding */
+  }
+  
+  .job-overview,
+  .essential,
+  .preferable {
+      padding: 0.8rem;        /* Reduce padding */
+  }
+}
+
+/* ===================================================================
+ About Page Styles
+ =================================================================== */
+/* Student ID styles */
+ul.student-id-list {
+  display: flex;           /* Use flex layout for horizontal arrangement */
+  justify-content: center; /* Center horizontally */
+  gap: 2rem;               /* Column spacing adjustable, e.g. 2rem */
+  padding: 0;              /* Remove ul default indentation */
+  margin: 2rem 0;          /* Vertical margins */
+  list-style: none;        /* Remove default bullets */
+}
+
+.student-id {
+  list-style: none;        /* Prevent browser inheritance of ul settings */
+  text-align: center;      /* Center content */
+  font-weight: bold;       /* Optional: bold name and ID */
+  color: #333;
+  background: #f8f8f8;     /* Optional: light background color */
+  border-radius: 6px;      /* Rounded corners */
+  padding: 1rem 1.5rem;    /* Appropriate padding */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Subtle shadow */
+}
+
+
+/* Team photo styles */
+.team-photo {
+  float: right;             /* Float right */
+  margin: 0 0 1.5rem 1.5rem; /* Margins */
+  border: 2px solid #ccc;   /* Border */
+  border-radius: 8px;       /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Shadow */
+  overflow: hidden;         /* Hide overflow content */
+}
+
+.team-photo img {
+  display: block;           /* Block display */
+  width: 100%;             /* Width 100% */
+  height: auto;            /* Auto height */
+  border-radius: 6px;      /* Rounded corners */
+}
+
+.team-photo figcaption {
+  padding: 0.5rem;         /* Padding */
+  text-align: center;      /* Center text */
+  background: #f8f8f8;     /* Background color */
+  border-top: 1px solid #eee;  /* Top border */
+}
+
+/* Table styles */
+.team-table {
+  width: 80%;              /* Table width */
+  margin: 2rem auto;       /* Center display */
+  border-collapse: collapse;  /* Merge borders */
+  background: #fff;        /* Background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Shadow */
+}
+
+.team-table caption {
+  font-size: 1.2rem;       /* Title size */
+  font-weight: bold;       /* Bold */
+  margin-bottom: 1rem;     /* Bottom margin */
+  color: #333;             /* Text color */
+}
+
+.team-table th {
+  background: #B80028;     /* Header background color */
+  color: white;            /* Text color */
+  font-weight: bold;       /* Bold */
+  padding: 1rem;           /* Padding */
+  text-align: left;        /* Left align */
+}
+
+.team-table td {
+  padding: 1rem;           /* Padding */
+  border: 1px solid #ddd;  /* Border */
+  background: #f8f8f8;     /* Cell background color */
+  transition: background-color 0.3s ease;  /* Transition effect */
+}
+
+.team-table tr:hover td {
+  background: #f0f0f0;     /* Background color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .team-photo {
+      float: none;         /* Remove float */
+      margin: 1rem auto;   /* Center display */
+      display: block;      /* Block display */
+      max-width: 300px;    /* Maximum width */
+  }
+  
+  .team-table {
+      width: 100%;         /* Full width display */
+  }
+  
+  .student-id {
+      padding-left: 1rem;  /* Reduce left padding */
+  }
+
+  ul.student-id-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
